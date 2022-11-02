@@ -10,7 +10,7 @@ describe("Icon: type", () => {
         type: "",
       },
     });
-    expect(wrapper.find("svg").exists()).toBe(true);
+    expect(wrapper.find("svg").exists()).toBe(false);
   });
   test("AcademicCapIcon", () => {
     const wrapper = mount(Icon, {
