@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd packages/vueui
-pnpm run test:run
+npm run test:run
