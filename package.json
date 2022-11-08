@@ -2,9 +2,11 @@
   "name": "xiezijie-ui",
   "version": "0.1.1",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "node ./scripts/preinstall.js"
   },
   "keywords": [],
   "author": "",

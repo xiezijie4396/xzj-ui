@@ -60,7 +60,7 @@
 <script>
   import * as OUTLINE from '@heroicons/vue/24/outline'
   import * as SOLID from '@heroicons/vue/24/solid'
-  import { copy } from 'shared'
+  import { copy } from '@xiezijie/shared'
 
   export default {
     data() {

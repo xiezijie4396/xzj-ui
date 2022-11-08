@@ -43,11 +43,11 @@ importers:
       '@vitejs/plugin-vue': ^3.1.2
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/test-utils': 2.0.2
+      '@xiezijie/shared': workspace:1.0.0
       autoprefixer: ^10.4.12
       eslint-plugin-vue: ^9.6.0
       happy-dom: 6.0.4
       postcss: ^8.4.17
-      shared: workspace:1.0.0
       tailwindcss: ^3.1.8
       vitepress: 1.0.0-alpha.21
       vitest: 0.21.1
@@ -55,7 +55,7 @@ importers:
     dependencies:
       '@heroicons/vue': 2.0.12_vue@3.2.40
       '@vitejs/plugin-vue': 3.1.2_vue@3.2.40
-      shared: link:../shared
+      '@xiezijie/shared': link:../shared
       vue: 3.2.40
     devDependencies:
       '@types/node': 18.11.0
