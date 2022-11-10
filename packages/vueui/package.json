@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "esno ./scripts/build.ts",
+    "build:all": "vite build",
     "docs:dev": "vitepress dev docs",
     "test": "vitest",
     "test:run": "vitest run",
@@ -27,6 +28,8 @@
     "@vue/test-utils": "2.0.2",
     "autoprefixer": "^10.4.12",
     "eslint-plugin-vue": "^9.6.0",
+    "esno": "^0.16.3",
+    "fs-extra": "^10.1.0",
     "happy-dom": "6.0.4",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8",
