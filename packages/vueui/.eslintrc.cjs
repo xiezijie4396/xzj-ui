@@ -1,4 +1,4 @@
-module.exports =   {
+module.exports = {
   root: true,
   env: {
     browser: true,
@@ -12,7 +12,7 @@ module.exports =   {
     __DEV__: true
   },
   // 解析 .vue 文件
-  parser: 'vue-eslint-parser', 
+  parser: 'vue-eslint-parser',
   extends: [
     'plugin:json/recommended',
     'plugin:vue/vue3-essential',
@@ -26,6 +26,8 @@ module.exports =   {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'endOfLine': [0],
+    'semi': [0]
   }
 }
