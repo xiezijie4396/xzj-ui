@@ -1,3 +1,0 @@
----
-"xiezijie-shared": major
----

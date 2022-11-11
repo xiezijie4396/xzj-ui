@@ -21,11 +21,17 @@ jobs:
         run: cd packages/vueui && pnpm install
       - name: Build
         run: cd packages/vueui && pnpm run build
-      - name: "Publish to the npm registry"
-        uses: primer/publish@3.0.0
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
-        with:
-          default_branch: "publish"
-          dir: "packages/vueui/dist"
+      
+      - name: Publish
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        # You can do something when a publish should happen.
+        run: pnpm publish --filter xiezijie-ui
+        dir: "packages/vueui/dist"
+          
