@@ -1,0 +1,5 @@
+---
+"@xiezijie/shared": major
+---
+
+vscode
