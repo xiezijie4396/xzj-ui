@@ -33,5 +33,4 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         # You can do something when a publish should happen.
         run: pnpm publish --filter xiezijie-ui
-        dir: "packages/vueui/dist"
           
