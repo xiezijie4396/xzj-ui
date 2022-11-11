@@ -4,7 +4,7 @@ import "tailwindcss/tailwind.css";
 // import App from './App.vue'
 
 // const app = createApp(App)
-// // app.mount('#app')
+// app.mount('#app')
 
 import XzjButton from "./Button/Button.vue";
 import XzjIcon from "./Icon/Icon.vue";
