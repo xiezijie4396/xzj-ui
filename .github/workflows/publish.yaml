@@ -25,12 +25,15 @@ jobs:
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
       
-      - name: Publish
-        if: steps.changesets.outputs.hasChangesets == 'false'
+      - name: Send a Slack notification if a publish happens
+        if: steps.changesets.outputs.published == 'true'
         # You can do something when a publish should happen.
         run: pnpm publish --filter xiezijie-ui
           
