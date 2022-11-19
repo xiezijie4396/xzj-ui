@@ -45,7 +45,7 @@ importers:
       '@vitejs/plugin-vue': ^3.1.2
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/test-utils': 2.0.2
-      '@xiezijie/shared': workspace:*
+      '@xiezijie/shared': workspace:^0.0.2
       autoprefixer: ^10.4.12
       eslint-plugin-vue: ^9.6.0
       esno: ^0.16.3
@@ -1565,7 +1565,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /ci-info/3.5.0:
