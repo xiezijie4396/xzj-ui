@@ -1,13 +1,14 @@
 {
-  "name": "xiezijie-main",
-  "version": "0.1.1",
+  "name": "@xiezjie/main",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "preinstall": "node ./scripts/preinstall.js",
-    "changeset": "changeset"
+    "build": "pnpm --recursive --stream build",
+    "release": "pnpm --recursive --stream build && changeset publish"
   },
   "keywords": [],
   "author": "",

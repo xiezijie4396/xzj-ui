@@ -25,8 +25,8 @@
 </template>
 
 <script lang="ts" setup>
-import XzjButton from "./Button/Button.vue";
-import XzjIcon from "./Icon/Icon.vue";
+import XzjButton from "./components/Button/Button.vue";
+import XzjIcon from "./components/Icon/Icon.vue";
 const test = (e) => {
   console.log(e);
 };

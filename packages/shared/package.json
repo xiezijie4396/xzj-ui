@@ -1,10 +1,16 @@
 {
-  "name": "xiezijie-shared",
-  "version": "1.0.0",
+  "name": "@xiezijie/shared",
+  "version": "0.0.2",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
+  },
+  "files": [
+    "./dist"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",

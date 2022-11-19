@@ -1,3 +1,4 @@
+import "tailwindcss/tailwind.css";
 import Icon from "./Icon.vue";
 import { App } from "vue";
 
