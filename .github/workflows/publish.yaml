@@ -18,7 +18,7 @@ jobs:
         with:
           version: 6.31.0
       - name: Install modules
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
       - name: Build and Publish to npm
         id: changesets
         uses: changesets/action@v1
