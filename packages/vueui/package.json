@@ -1,6 +1,6 @@
 {
   "name": "@xiezijie/vueui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "",
   "main": "./index.js",
   "module": "./index.js",
@@ -24,7 +24,7 @@
   "dependencies": {
     "@heroicons/vue": "^2.0.12",
     "@vitejs/plugin-vue": "^3.1.2",
-    "@xiezijie/shared": "workspace:^0.0.6",
+    "@xiezijie/shared": "workspace:^0.0.7",
     "vue": "^3.2.40"
   },
   "devDependencies": {
