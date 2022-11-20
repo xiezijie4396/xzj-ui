@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "preinstall": "node ./scripts/preinstall.js",
     "build": "pnpm --recursive --stream build",
-    "release": "pnpm --recursive --stream build && pnpm publish -r --no-git-checks"
+    "release": "pnpm --recursive --stream build && pnpm publish -r"
   },
   "keywords": [],
   "author": "",
