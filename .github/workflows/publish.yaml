@@ -18,7 +18,7 @@ jobs:
         with:
           version: 6.31.0
       - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> .npmrc
+        run: echo "\n//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> .npmrc
       - name: Install modules
         run: pnpm install --no-frozen-lockfile
       - name: Build and Publish to npm
