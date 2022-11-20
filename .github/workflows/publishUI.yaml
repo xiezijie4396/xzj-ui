@@ -1,28 +1,38 @@
-name: Publish @xiezijie/vueui To Npm
-
+name: Changesets
 on:
   push:
-    branches: [publish]
-
+    branches:
+      - publish
+env:
+  CI: true
+  PNPM_CACHE_FOLDER: .pnpm-store
 jobs:
-  publish:
+  version:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
-
-    name: "publish npm"
-
-    environment: npm
-
     steps:
-      - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v2.1.0
+      - name: checkout code repository
+        uses: actions/checkout@v3
         with:
-          version: 6.31.0
-      - name: Install modules
-        run: cd packages/vueui && pnpm install
-      - name: Build
-        run: cd packages/vueui && pnpm run build
-      - name: Publish
-        run: cd packages/vueui/dist && pnpm publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
+          fetch-depth: 0
+      - name: setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+      - name: install dependencies
+        run: pnpm install
+      - name: create and publish versions
+        uses: changesets/action@v1
+        with:
+          version: pnpm ci:version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm ci:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
