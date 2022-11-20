@@ -15,7 +15,7 @@ jobs:
       with:
         version: 7.2.1
     - name: Install modules
-      run: cd packages/vueui && pnpm install
+      run: cd packages/vueui && pnpm install --no-frozen-lockfile
     - name: Run Lint
       run: cd packages/vueui && pnpm run lint
   UnitTest:
@@ -28,6 +28,6 @@ jobs:
       with:
         version: 7.2.1
     - name: Install modules
-      run: cd packages/vueui && pnpm install
+      run: cd packages/vueui && pnpm install --no-frozen-lockfile
     - name: Run Test
       run: cd packages/vueui && pnpm run test:run
