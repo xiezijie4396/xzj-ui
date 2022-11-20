@@ -1,5 +1,13 @@
 # @xiezijie/vueui
 
+## 0.0.16
+
+### Patch Changes
+
+- ceshi
+- Updated dependencies
+  - @xiezijie/shared@0.0.6
+
 ## 0.0.15
 
 ### Patch Changes
