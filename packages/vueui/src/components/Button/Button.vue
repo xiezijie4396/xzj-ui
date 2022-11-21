@@ -25,7 +25,7 @@ export default {
 <script lang="ts" setup>
 import { computed, useSlots } from "vue";
 import { getType, calStyle, handleIcon } from "./handleStyle";
-import XzjIcon from "../Icon";
+import { Icon as XzjIcon } from "../Icon";
 
 const emit = defineEmits(["click"]);
 
