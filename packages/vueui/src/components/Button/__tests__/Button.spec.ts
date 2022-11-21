@@ -2,7 +2,7 @@ import { Button } from "../index";
 
 import { shallowMount } from "@vue/test-utils";
 import { describe, expect, test } from "vitest";
-import Icon from "../../Icon";
+import { Icon } from "../../Icon";
 
 describe("Button", () => {
   test("mount @vue/test-utils", () => {
