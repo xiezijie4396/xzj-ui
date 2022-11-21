@@ -58,8 +58,8 @@
 </div>
 
 <script>
-  import * as OUTLINE from '@heroicons/vue/24/outline'
-  import * as SOLID from '@heroicons/vue/24/solid'
+  import * as OUTLINE from '@heroicons/vue/24/outline/esm/index.js'
+  import * as SOLID from '@heroicons/vue/24/solid/esm/index.js'
   import { copy } from '@xiezijie/shared'
 
   export default {
