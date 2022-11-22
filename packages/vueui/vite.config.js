@@ -7,6 +7,10 @@ export const config = {
   test: {
     globals: true,
     environment: "happy-dom",
+    coverage: {
+      provider: "istanbul", // or 'c8',
+      reporter: ["text", "json", "html"],
+    },
   },
   define: {
     "process.env": {}, // 修复vite自身的bug
