@@ -1,6 +1,6 @@
 <template>
   <div
-    class="m-1 min-w-min select-none inline-flex items-center justify-center"
+    class="m-1 min-w-min select-none inline-flex items-center justify-center box-border"
     :class="btnType"
     @click:any="handleClick"
   >
