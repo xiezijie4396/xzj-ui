@@ -2,8 +2,8 @@
   "name": "@xiezijie/vueui",
   "version": "0.0.17",
   "description": "",
-  "main": "./index.js",
-  "module": "./index.js",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
   "scripts": {
     "dev": "vite",
     "build": "esno ./scripts/build.ts",
