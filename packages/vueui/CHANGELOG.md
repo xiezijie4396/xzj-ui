@@ -1,5 +1,11 @@
 # @xiezijie/vueui
 
+## 0.0.20
+
+### Patch Changes
+
+- 新版 cli
+
 ## 0.0.19
 
 ### Patch Changes

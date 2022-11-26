@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@xiezijie/vueui": "^0.0.19",
     "vue": "^3.2.41"
   },
   "devDependencies": {
