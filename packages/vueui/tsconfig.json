@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declarationDir": "../dist/types", /* '.d.ts' 文件输出目录 */
+  },
+  "include": [
+    "src/**/*.*",
+    "shims-vue.d.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "esModuleInterop": false,
+  "allowSyntheticDefaultImports": true //允许从没有默认导出的模块引入
+}

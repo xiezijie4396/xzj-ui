@@ -1,9 +1,17 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 export const config = {
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({
+      outputDir: "./dist/types",
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
+    }),
+  ],
   test: {
     globals: true,
     environment: "happy-dom",
