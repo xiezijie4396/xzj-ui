@@ -41,23 +41,21 @@
   </svg>
 </template>
 
-<script lang="ts">
-// 声明额外的选项
-export default {
-  name: "xzj-loading",
-};
-</script>
-
 <script lang="ts" setup>
-defineProps({
+interface Props {
   style: {
-    type: Object,
-    default: () => ({
-      width: "16px",
-      height: "16px",
-      color: "#000",
-    }),
-  },
+    width: string;
+    height: string;
+    color: string;
+  };
+}
+
+withDefaults(defineProps<Props>(), {
+  style: () => ({
+    width: "16px",
+    height: "16px",
+    color: "#000",
+  }),
 });
 </script>
 
@@ -75,3 +73,10 @@ defineProps({
   }
 }
 </style>
+
+<script lang="ts">
+// 声明额外的选项
+export default {
+  name: "xzj-loading",
+};
+</script>

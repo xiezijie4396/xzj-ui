@@ -2,23 +2,21 @@
   <component :is="componentName" :style="customStyle" />
 </template>
 
-<script lang="ts">
-// 声明额外的选项
-export default {
-  name: "xzj-icon",
-};
-</script>
-
 <script lang="ts" setup>
 import * as OUTLINE from "@heroicons/vue/24/outline/esm/index.js";
 import * as SOLID from "@heroicons/vue/24/solid/esm/index.js";
 import Loading from "./Loading.vue";
 import { computed } from "vue";
 
-const props = defineProps({
-  type: { type: String, required: true },
-  color: { type: String, default: "#000" },
-  size: { type: [String, Number], default: 16 },
+interface Props {
+  type: string;
+  color?: string;
+  size?: string | number;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  color: "#000",
+  size: 16,
 });
 
 const componentName = computed(() => {
@@ -42,4 +40,11 @@ const customStyle = computed(() => {
     display: "inline-block",
   };
 });
+</script>
+
+<script lang="ts">
+// 声明额外的选项
+export default {
+  name: "xzj-icon",
+};
 </script>

@@ -15,29 +15,35 @@
   </div>
 </template>
 
-<script lang="ts">
-// 声明额外的选项
-export default {
-  name: "xzj-button",
-};
-</script>
-
 <script lang="ts" setup>
 import { computed, useSlots } from "vue";
 import { getType, calStyle, handleIcon } from "./handleStyle";
 import XzjIcon from "../Icon/Icon.vue";
 
-const emit = defineEmits(["click"]);
+const emit = defineEmits<{
+  (e: "click", event: MouseEvent): void;
+}>();
 
-const props = defineProps({
-  type: { type: String, default: "default" },
-  disabled: { type: Boolean, default: false },
-  round: { type: Boolean, default: false },
-  circle: { type: Boolean, default: false },
-  plain: { type: Boolean, default: false },
-  icon: { type: String },
-  size: { type: String, default: "default" },
-  loading: { type: Boolean, default: false },
+interface Props {
+  type?: string;
+  disabled?: boolean;
+  round?: boolean;
+  circle?: boolean;
+  plain?: boolean;
+  icon?: string;
+  size?: string;
+  loading?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  type: "default",
+  disabled: false,
+  round: false,
+  circle: false,
+  plain: false,
+  icon: "",
+  size: "default",
+  loading: false,
 });
 
 const slots = useSlots();
@@ -60,4 +66,11 @@ const iconStyle = computed(() => {
   const type = getType(props.type);
   return handleIcon(type, props, slots);
 });
+</script>
+
+<script lang="ts">
+// 声明额外的选项
+export default {
+  name: "xzj-button",
+};
 </script>
